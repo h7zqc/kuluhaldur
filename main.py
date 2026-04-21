@@ -6,9 +6,10 @@ import csv
 import os
 from datetime import datetime
 
+# TODO: lisada hiljem kasutaja sisselogimine
 
 #  KLASSID 
-
+# Transaction klass - hoiab ühe tehingu andmeid
 class Transaction:
     def __init__(self, summa, kirjeldus, kategooria, tyup, kuupaev, id=None):
         self.id = id
