@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 
 
-# ==================== KLASSID ====================
+#  KLASSID 
 
 class Transaction:
     def __init__(self, summa, kirjeldus, kategooria, tyup, kuupaev, id=None):
@@ -60,7 +60,7 @@ class Budget:
         return self.kategooria + " eelarve: " + str(self.limiit) + " €"
 
 
-# ==================== ANDMEBAAS ====================
+#  ANDMEBAAS 
 
 class DatabaseManager:
 
@@ -214,7 +214,7 @@ class DatabaseManager:
         return tulu - kulu
 
 
-# ==================== RAPORT ====================
+#  RAPORT 
 
 class Report:
     def __init__(self, db):
@@ -249,7 +249,7 @@ class Report:
             print(str(tehingud[i].id) + ". " + str(tehingud[i]))
 
 
-# ==================== CSV ====================
+#  CSV 
 
 class CSVExporter:
     def ekspordi(self, tehingud, failinimi="eksport.csv"):
@@ -262,7 +262,7 @@ class CSVExporter:
         print("Eksporditud " + str(len(tehingud)) + " tehingut faili: " + failinimi)
 
 
-# ==================== MENÜÜ ====================
+#  MENÜÜ 
 
 def hetkKuu():
     return datetime.today().strftime("%Y-%m")
