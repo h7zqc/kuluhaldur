@@ -94,7 +94,7 @@ class DatabaseManager:
         if arv == 0:
             vaikimisi = [("Toit", "kulu"), ("Transport", "kulu"),
                          ("Eluase", "kulu"), ("Meelelahutus", "kulu"),
-                         ("Palk", "tulu"), ("Muu", "kulu")]
+                         ("Palk", "tulu"), ("Muu", "kulu"), ("Tervis", "kulu")]
             for nimi, tyup in vaikimisi:
                 conn.execute("INSERT INTO kategoriad (nimi, tyup) VALUES (?, ?)", (nimi, tyup))
             conn.commit()
@@ -432,6 +432,7 @@ def main():
         print("6. Raportid")
         print("7. Ekspordi CSV")
         print("0. Välju")
+        print("-" * 28)
         valik = input("\nVali: ").strip()
         if valik == "1":
             lisaTehing(db)
